@@ -17,7 +17,9 @@ const app = express();
 const allowedOrigins = [
   'http://localhost:5173', // Your local frontend for development
   // Add your deployed frontend URL here later, e.g., 'https://your-frontend.vercel.app'
+  'https://hilarious-kitten-eb84f1.netlify.app'
 ];
+
 if (process.env.CORS_ORIGIN) { // For production
     allowedOrigins.push(process.env.CORS_ORIGIN);
 }
