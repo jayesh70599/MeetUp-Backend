@@ -131,7 +131,7 @@ const socketHandler = (io) => {
         const senderName = socketToUserMap[socket.id] || socket.id; // Get sender's ID/name
         const senderPeerId = socketToPeerMap[socket.id];
 
-        console.log(`Room ${meetingId} received message from ${senderId}: ${message}`);
+        console.log(`Room ${meetingId} received message from ${senderName}: ${message}`);
 
         // Broadcast the message to everyone in the room (including sender)
         io.to(meetingId).emit('receive-chat-message', {
